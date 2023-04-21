@@ -11,6 +11,9 @@ import logging
 print("Boot Run Success")
 print("Boot Deleate Manager On")
 print("이 창이 종료될때까지 기다려주세요..")
+# ========== User ==========
+
+USER = os.path.expanduser('~')
 
 # =========== 함수 [ 바탕화면 ] =============
 
@@ -56,15 +59,20 @@ def RemoverMaster(folder_path):
 
 # ========== [ RUN ] ==========
 
-BatangRemoverMaster(r"C:\Users\User\Desktop")
+DESKTOP = os.path.join(USER,"Desktop")
+BatangRemoverMaster(DESKTOP)
 print("[ ! ] Desktop Clear")
-RemoverMaster(r"C:\Users\User\Pictures")
+Pictures = os.path.join(USER,"Pictures")
+RemoverMaster(Pictures)
 print("[ ! ] Picture Clear")
-RemoverMaster(r"C:\Users\User\Documents")
+Documents = os.path.join(USER,"Documents")
+RemoverMaster(Documents)
 print("[ ! ] Document Clear")
-RemoverMaster(r"C:\Users\User\Videos")
+Videos = os.path.join(USER,"Videos")
+RemoverMaster(Videos)
 print("[ ! ] Video Clear")
-RemoverMaster(r"C:\Users\User\Downloads")
+Downloads = os.path.join(USER,"Downloads")
+RemoverMaster(Downloads)
 print("[ ! ] Download Clear")
 os.system('PowerShell.exe -Command Clear-RecycleBin -Force')
 print("[ ! ] Trashbin Clear")
