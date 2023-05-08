@@ -4,3 +4,6 @@
 Author Sence
 # Use
 Insert File to shell:startup
+# REGEDIT
+컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize
+[새로 만들기 > DWORD(32비트) 값] StartupDelayInMSec : 0
